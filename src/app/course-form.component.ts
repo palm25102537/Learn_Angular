@@ -10,14 +10,23 @@ selector:"course", // to define html element and angular will render this elemen
 template:
 `
 <h2>{{'Title : '+getTitle()}}</h2>
+<h2 [textContent]="propertyBinding"></h2>
 <ul> 
 <li *ngFor="let course of courses">{{course}}</li>
 </ul>
+Interpretation
+<br/>
+<img src={{imageURL}}>
+<br/>
+Angular translate above into Property Binding
+<br/>
+<img [src]="imageURL"/>
 `
 })
 
 export class CoursesComponent{
-    
+    propertyBinding ="Hello World"
+    imageURL = "https://picsum.photos/200/300"
     courses:string[];
     title:any;
     authorAmount:number;
