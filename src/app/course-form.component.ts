@@ -13,7 +13,7 @@ template:
 <div>
 {{content | spreadWord:"of":"the"}}
 <br/>
-<input [(ngModel)] = content  />
+<input [(ngModel)] = content   />
 </div>
 <div>
 <a (click)="onClickA()">{{""|icon:clickCheck}}</a>
