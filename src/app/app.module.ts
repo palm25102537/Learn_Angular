@@ -8,6 +8,10 @@ import { CourseComponent } from './course/course.component';
 import { CourseService } from './course.service';
 import { IconPipe } from './icon.pipe';
 import { SpreadWordPipe } from './spreadWord.pipe';
+import { FavoriteComponent } from './favorite/favorite.component';
+import { PanelComponent } from './panel/panel.component';
+import { LikeComponent } from './like/like.component';
+
 //NgModule decorator
 // turn class into module
 @NgModule({
@@ -17,7 +21,11 @@ import { SpreadWordPipe } from './spreadWord.pipe';
     CourseComponent,
     SummaryPipe,
     IconPipe,
-    SpreadWordPipe
+    SpreadWordPipe,
+    FavoriteComponent,
+    PanelComponent,
+    LikeComponent,
+    
   ],
   imports: [
     BrowserModule,

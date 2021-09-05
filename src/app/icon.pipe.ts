@@ -9,9 +9,9 @@ export class IconPipe implements PipeTransform{
     transform(value:any,arg?:boolean){
 
         if(arg){
-            return "⮛"
+            return "❤"
         }else{
-            return "⮚"
+            return "❤"
         }
            
     }

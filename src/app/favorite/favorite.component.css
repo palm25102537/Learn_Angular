@@ -1,0 +1,10 @@
+a:hover{
+    cursor: pointer;
+    border:none;
+    outline:none;
+  
+}
+
+a:focus{
+    background-color: aqua;
+}

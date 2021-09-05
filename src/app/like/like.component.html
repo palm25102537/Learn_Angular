@@ -1,0 +1,7 @@
+<p class="head">{{body}}</p>
+<div class=":content" style="display:flex;">
+    <a (click)="onLike()" class="{{isActive}}">
+        {{" "|icon}}
+        <span style="color:black;">{{likesCount}}</span>
+    </a>
+</div>

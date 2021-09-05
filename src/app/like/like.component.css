@@ -1,0 +1,11 @@
+a:hover{
+    cursor:pointer
+}
+
+.active{
+    color:deeppink;
+}
+
+.inActive{
+    color:#CCCC;
+}
