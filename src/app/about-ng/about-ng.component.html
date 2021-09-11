@@ -1,0 +1,56 @@
+<!-- <div *ngIf="courses.length > 0; else noCourses">
+    List of course
+</div> -->
+<!-- can use this for the same meaning to above-->
+<!-- <div *ngIf="courses.length > 0 then coursesList else noCourses"></div> -->
+<!-- chain ngIf to refactor code-->
+<!-- <ng-template #noCourses>
+    No courses yet
+</ng-template>
+<ng-template #coursesList>
+    List of course
+</ng-template> -->
+
+
+<!-- Hidden Property -->
+<!-- <div [hidden]="courses.length===0">
+    List of course
+</div>
+<div [hidden]="courses.length > 0">
+    No courses yet
+</div> -->
+
+<!-- ngSwitchCase-->
+<!-- <ul>
+    <li [class.active]="viewMode == 'map'"><a (click)="viewMode = 'map'">Map View</a></li>
+    <li [class.active]="viewMode == 'list'"><a (click)="viewMode = 'list'">List View</a></li>
+</ul>      
+<div [ngSwitch]="viewMode">
+    <div *ngSwitchCase="'map'">
+        Map View Content
+    </div>
+    <div *ngSwitchCase="'list'">
+        List View Content
+    </div>
+    <div *ngSwitchDefault>
+
+    </div>
+</div> -->
+
+<!-- ngFor -->
+<!-- <button (click)="onAdd()">Add</button>
+<button (click)="loadCourses()">Load</button>
+<ul> -->
+    <!-- <li *ngFor="let course of courses; even as isEven;index as i; odd as isOdd;last as isLast;first as isFirst">
+       {{i}} - {{course.name}} <span *ngIf="isEven">*</span><span *ngIf="isOdd">#</span><span *ngIf="isLast">3</span><span *ngIf="isFirst">1</span>
+       <button (click)="onRemove(course)">Remove</button>
+       <button (click)="onChange(course)">Update</button>
+    </li> -->
+
+    <!--TrackBy-->
+    <!-- <li *ngFor="let course of courses;index as i;trackBy: trackCourse ">
+        {{i}} - {{course.name}} 
+        <button (click)="onRemove(course)">Remove</button>
+        <button (click)="onChange(course)">Update</button>
+     </li>
+</ul> -->

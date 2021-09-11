@@ -1,6 +1,31 @@
 <p class="head">{{body}}</p>
 <div class=":content" style="display:flex;">
-    <a (click)="onLike()" class="{{isActive}}">
+    <!-- <a (click)="onLike()" [class.active]="isLiked" [class.inActive]="!isLiked">
+        {{" "|icon}}
+        <span style="color:black;">{{likesCount}}</span>
+    </a> -->
+
+    <!--Attribute directive-->
+    <!-- <a (click)="onLike()"[ngClass]="{
+        'active':isLiked,
+        'inActive':!isLiked
+    }">
+        {{" "|icon}}
+        <span style="color:black;">{{likesCount}}</span>
+    </a> -->
+    
+    <!--Style Binding-->
+    <!-- <a (click)="onLike()" 
+    [style.color]="isLiked? ' deeppink':'#CCCC'">
+        {{" "|icon}}
+        <span style="color:black;">{{likesCount}}</span>
+    </a> -->
+
+    <a (click)="onLike()" 
+    [ngStyle]="{
+        'color': isLiked? ' deeppink':'#CCCC'
+    }"
+    >
         {{" "|icon}}
         <span style="color:black;">{{likesCount}}</span>
     </a>

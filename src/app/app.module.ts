@@ -11,6 +11,9 @@ import { SpreadWordPipe } from './spreadWord.pipe';
 import { FavoriteComponent } from './favorite/favorite.component';
 import { PanelComponent } from './panel/panel.component';
 import { LikeComponent } from './like/like.component';
+import { AboutNgComponent } from './about-ng/about-ng.component';
+import { InputFormatDirective } from './input-format.directive';
+import { ZippyComponent } from './zippy/zippy.component';
 
 //NgModule decorator
 // turn class into module
@@ -25,6 +28,9 @@ import { LikeComponent } from './like/like.component';
     FavoriteComponent,
     PanelComponent,
     LikeComponent,
+    AboutNgComponent,
+    InputFormatDirective,
+    ZippyComponent,
     
   ],
   imports: [

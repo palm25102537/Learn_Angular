@@ -23,12 +23,10 @@ export class LikeComponent implements OnInit {
   onLike(){
     if(!this.isLiked){
       this.isLiked = true
-      this.isActive = "active"
       this.likesCount = +this.likesCount + 1
     }else{
       this.isLiked = false
-      this.likesCount = +this.likesCount - 1
-      this.isActive = "inActive"
+      this.likesCount = +this.likesCount - 1  
     }
    
   }
