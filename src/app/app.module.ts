@@ -14,6 +14,7 @@ import { LikeComponent } from './like/like.component';
 import { AboutNgComponent } from './about-ng/about-ng.component';
 import { InputFormatDirective } from './input-format.directive';
 import { ZippyComponent } from './zippy/zippy.component';
+import { FormComponent } from './form/form.component';
 
 //NgModule decorator
 // turn class into module
@@ -31,6 +32,7 @@ import { ZippyComponent } from './zippy/zippy.component';
     AboutNgComponent,
     InputFormatDirective,
     ZippyComponent,
+    FormComponent,
     
   ],
   imports: [
