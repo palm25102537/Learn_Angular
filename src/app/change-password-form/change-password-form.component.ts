@@ -12,9 +12,15 @@ export class ChangePasswordFormComponent implements OnInit {
     fb:FormBuilder
   ) { 
     this.form = fb.group({
-      oldPassword:['',Validators.required,ChangePasswordValidator.checkOldPassword],
+      oldPassword:['',
+      Validators.required,
+      ChangePasswordValidator.checkOldPassword
+    ],
       newPassword:['',Validators.required],
-      confirmPassword:['',Validators.required]
+      confirmPassword:['',Validators.required],
+
+    },{
+      validators:ChangePasswordValidator.passwordShouldMatch
     })
   }
 
