@@ -18,6 +18,7 @@ import { FormComponent } from './form/form.component';
 import { FormTestComponent } from './form-test/form-test.component';
 import { SignupFormComponent } from './signup-form/signup-form.component';
 import { FormComponentComponent } from './form-component/form-component.component';
+import { ChangePasswordFormComponent } from './change-password-form/change-password-form.component';
 
 //NgModule decorator
 // turn class into module
@@ -39,6 +40,7 @@ import { FormComponentComponent } from './form-component/form-component.componen
     FormTestComponent,
     SignupFormComponent,
     FormComponentComponent,
+    ChangePasswordFormComponent,
     
   ],
   imports: [
