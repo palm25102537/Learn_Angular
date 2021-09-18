@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { SummaryPipe } from './summary.pipe'
 import { AppComponent } from './app.component';
 import { CoursesComponent } from './course-form.component';
@@ -15,6 +15,9 @@ import { AboutNgComponent } from './about-ng/about-ng.component';
 import { InputFormatDirective } from './input-format.directive';
 import { ZippyComponent } from './zippy/zippy.component';
 import { FormComponent } from './form/form.component';
+import { FormTestComponent } from './form-test/form-test.component';
+import { SignupFormComponent } from './signup-form/signup-form.component';
+import { FormComponentComponent } from './form-component/form-component.component';
 
 //NgModule decorator
 // turn class into module
@@ -33,12 +36,15 @@ import { FormComponent } from './form/form.component';
     InputFormatDirective,
     ZippyComponent,
     FormComponent,
+    FormTestComponent,
+    SignupFormComponent,
+    FormComponentComponent,
     
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    
+    ReactiveFormsModule,
   ],
   providers: [
     CourseService //Call Singleton pattern that giving object in memory //this method call dependency injection

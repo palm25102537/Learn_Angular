@@ -1,0 +1,14 @@
+.form-control{
+    padding:5px;
+    border-radius: 10px;
+    border:1px solid black;
+    margin-left:10px;
+}
+
+.form-control.ng-touched{
+    border:1px solid salmon
+}
+
+a{
+    cursor:pointer
+}
