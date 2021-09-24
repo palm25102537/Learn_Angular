@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { ErrorHandler, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { SummaryPipe } from './summary.pipe'
@@ -19,6 +19,10 @@ import { FormTestComponent } from './form-test/form-test.component';
 import { SignupFormComponent } from './signup-form/signup-form.component';
 import { FormComponentComponent } from './form-component/form-component.component';
 import { ChangePasswordFormComponent } from './change-password-form/change-password-form.component';
+import { PostComponent } from './post/post.component';
+import {HttpClientModule} from '@angular/common/http'
+import { PostService } from './service/post.service';
+import { AppErrorHandle } from './service/error/app-error-handle';
 
 //NgModule decorator
 // turn class into module
@@ -41,15 +45,19 @@ import { ChangePasswordFormComponent } from './change-password-form/change-passw
     SignupFormComponent,
     FormComponentComponent,
     ChangePasswordFormComponent,
+    PostComponent,
     
   ],
   imports: [
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
+    HttpClientModule,
   ],
   providers: [
-    CourseService //Call Singleton pattern that giving object in memory //this method call dependency injection
+    CourseService, //Call Singleton pattern that giving object in memory //this method call dependency injection
+    PostService,
+    {provide:ErrorHandler,useClass:AppErrorHandle}, //tell angular to replace implementation 
   ],
   bootstrap: [AppComponent]
 })
