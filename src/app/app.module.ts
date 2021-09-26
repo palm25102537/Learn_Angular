@@ -23,6 +23,7 @@ import { PostComponent } from './post/post.component';
 import {HttpClientModule} from '@angular/common/http'
 import { PostService } from './service/post.service';
 import { AppErrorHandle } from './service/error/app-error-handle';
+import { GithubTestComponent } from './github-test/github-test.component';
 
 //NgModule decorator
 // turn class into module
@@ -46,6 +47,7 @@ import { AppErrorHandle } from './service/error/app-error-handle';
     FormComponentComponent,
     ChangePasswordFormComponent,
     PostComponent,
+    GithubTestComponent,
     
   ],
   imports: [

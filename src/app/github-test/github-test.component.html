@@ -1,0 +1,12 @@
+<h1>My Followers</h1>
+<div class="container" *ngFor="let detail of details">
+    <div class="box">
+        <div class="content-1">
+            <img width="80px" height="80px" src="{{detail.avatar_url}}" alt="profile pic"/>
+        </div>
+        <div class="content-2">
+            <p>{{detail.login}}</p>
+            <a href="detail.url">{{detail.html_url}}</a>
+        </div>
+    </div>  
+</div>

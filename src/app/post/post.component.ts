@@ -33,18 +33,9 @@ export class PostComponent implements OnInit {
 
   create(input:HTMLInputElement){
     let sendData = {title:input.value}
-   
-    this.service.create(sendData).subscribe((res)=>{
-      this.posts.splice(0,0,res)
-    },(error:AppError) =>{
-      if(error instanceof BadInput){
-        // this.forms.setErrors(error.originalError)
-      }else{
-        throw error
-      }
-      // alert('An unexpected error occurred')
-      // console.log(error)
-   })
+   this.posts.splice(0,0,{title:input.value})
+    input.value = ""
+    this.service.create(sendData).subscribe()
   }
 
   update(post:any){

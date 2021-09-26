@@ -1,7 +1,7 @@
 <input 
 type="text"
 class="form-control"
-(keyup.enter)="createPost(title)"
+(keyup.enter)="create(title)"
 #title
 />
 
@@ -11,12 +11,12 @@ class="form-control"
     class="list-group-item">
     {{post.title}}
     <button
-    (click)="updatePost(post)"
+    (click)="update(post)"
     >
         Update
     </button>
     <button
-    (click)="deletePost(post)"
+    (click)="delete(post)"
     >
         Delete
     </button>
