@@ -24,7 +24,9 @@ import {HttpClientModule} from '@angular/common/http'
 import { PostService } from './service/post.service';
 import { AppErrorHandle } from './service/error/app-error-handle';
 import { GithubTestComponent } from './github-test/github-test.component';
-
+import { RouterModule } from '@angular/router';
+import { GithubProfileComponent } from './github-profile/github-profile.component';
+import { NavbarComponent } from './navbar/navbar.component';
 //NgModule decorator
 // turn class into module
 @NgModule({
@@ -48,13 +50,36 @@ import { GithubTestComponent } from './github-test/github-test.component';
     ChangePasswordFormComponent,
     PostComponent,
     GithubTestComponent,
-    
+    GithubProfileComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
+    RouterModule.forRoot([
+      {
+        path:'',
+        component:SignupFormComponent
+      },
+      {
+        path:'followers',
+        component:GithubTestComponent
+      },
+      {
+        path:'followers/:id/:username',
+        component:GithubProfileComponent
+      },
+      {
+        path:'post',
+        component:PostComponent
+      },
+      {
+        path:'**',
+        component:FormTestComponent
+      }
+    ])
   ],
   providers: [
     CourseService, //Call Singleton pattern that giving object in memory //this method call dependency injection

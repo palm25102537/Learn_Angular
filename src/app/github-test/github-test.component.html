@@ -6,7 +6,7 @@
         </div>
         <div class="content-2">
             <p>{{detail.login}}</p>
-            <a href="detail.url">{{detail.html_url}}</a>
+            <a [routerLink]="[detail.id,detail.login]">{{detail.html_url}}</a>
         </div>
     </div>  
 </div>

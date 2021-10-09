@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { FollowersService } from '../service/followers.service';
+import { ActivatedRoute } from '@angular/router';
+import { map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-github-test',
@@ -12,10 +14,23 @@ export class GithubTestComponent implements OnInit {
 
   constructor(
     private http:HttpClient,
-    private service:FollowersService
+    private service:FollowersService,
+    private route:ActivatedRoute
   ) { }
 
   ngOnInit(): void {
+    this.route.params.pipe(
+      map(params=>{
+         console.log(params)
+      })
+    )
+
+    this.route.queryParamMap.subscribe(
+        query =>{
+          
+        }
+    )
+
     this.service.getAll().subscribe(
       (res)=>{
         console.log(res)
@@ -27,5 +42,7 @@ export class GithubTestComponent implements OnInit {
     )
     console.log(this.details)
   }
+
+
 
 }
