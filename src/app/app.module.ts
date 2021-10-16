@@ -27,6 +27,13 @@ import { GithubTestComponent } from './github-test/github-test.component';
 import { RouterModule } from '@angular/router';
 import { GithubProfileComponent } from './github-profile/github-profile.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { RouterTestComponent } from './router-test/router-test.component';
+import { NotFoundComponent } from './router-test/notfound.component';
+import { RouterDetailComponent } from './router-test/router-test-detail.component';
+import { AuthenLessonComponent } from './authen-lesson/authen-lesson.component';
+import { AuthenAdminComponent } from './authen-lesson/authen-admin.component';
+import { NoAccessComponent } from './authen-lesson/authen-noAccess.component';
+import { LoginComponent } from './authen-lesson/authen-login.component';
 //NgModule decorator
 // turn class into module
 @NgModule({
@@ -51,7 +58,14 @@ import { NavbarComponent } from './navbar/navbar.component';
     PostComponent,
     GithubTestComponent,
     GithubProfileComponent,
-    NavbarComponent
+    NavbarComponent,
+    RouterTestComponent,
+    NotFoundComponent,
+    RouterDetailComponent,
+    AuthenLessonComponent,
+    AuthenAdminComponent,
+    NoAccessComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -61,23 +75,19 @@ import { NavbarComponent } from './navbar/navbar.component';
     RouterModule.forRoot([
       {
         path:'',
-        component:SignupFormComponent
+        component:AuthenLessonComponent
       },
       {
-        path:'followers',
-        component:GithubTestComponent
+        path:'admin',
+        component:AuthenAdminComponent
       },
       {
-        path:'followers/:id/:username',
-        component:GithubProfileComponent
-      },
-      {
-        path:'post',
-        component:PostComponent
+        path:'login',
+        component:LoginComponent
       },
       {
         path:'**',
-        component:FormTestComponent
+        component:NoAccessComponent
       }
     ])
   ],
