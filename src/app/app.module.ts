@@ -87,7 +87,7 @@ import { LoginComponent } from './authen-lesson/authen-login.component';
       },
       {
         path:'**',
-        component:NoAccessComponent
+        component:NavbarComponent
       }
     ])
   ],
